@@ -40,8 +40,8 @@ For both alternatives you also need to download the reference data bundle for yo
 ```
 wget http://insilico.hpc.uio.no/pcgr/pcgr.databundle.grch37.20210627.tgz -O grch37.tgz
 wget http://insilico.hpc.uio.no/pcgr/pcgr.databundle.grch38.20210627.tgz -O grch38.tgz
-tar -xzf grch37.tar.gz  # will extract into ./data/grch37/
-tar -xzf grch38.tar.gz  # will extract into ./data/grch38/
+tar -xzf grch37.tgz  # will extract into ./data/grch37/
+tar -xzf grch38.tgz  # will extract into ./data/grch38/
 ```
 
 There is a chance you'll encounter errors during the installation. Due to ongoing updates of the packages in public repositories, some packages might end up conflicting with each other or missing for your system. So try to stick to the dockerized version of PCGR whenever possible.
