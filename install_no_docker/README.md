@@ -54,6 +54,12 @@ Activate your environment with:
 conda activate pcgr
 ```
 
+Create an output directory:
+
+```
+mkdir test_out
+```
+
 Run PCGR with `--no-docker` flag. The `--pcgr_dir` argument now doesn't have to contain anything but a `data` directory that you downloaded.
 
 ```
@@ -74,6 +80,6 @@ pcgr.py
 --estimate_msi_status
 --estimate_tmb
 --no_vcf_validate
---no-docker
+--no_docker
 ```
 If you encounter errors with VEP, you may need to unset/reset PERL5LIB (e.g. `export PERL5LIB=""`), see the [following issue](https://github.com/bioconda/bioconda-recipes/issues/4390)
