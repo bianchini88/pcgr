@@ -28,7 +28,7 @@ Build the _pcgr_ package from source, which is useful if you need to use the dev
 
 ```
 conda install conda-build
-export CHANNELS="-c conda-forge -c bioconda -c pcgr -c defaults"
+export CHANNELS="-c conda-forge -c bioconda -c defaults --override-channels"
 conda build $CHANNELS install_no_docker/conda_pkg/pcgr
 conda install --use-local $CHANNELS pcgr
 ```
