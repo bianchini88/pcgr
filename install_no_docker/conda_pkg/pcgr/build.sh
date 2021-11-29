@@ -22,7 +22,7 @@ wget https://github.com/EBIvariation/vcf-validator/releases/download/v0.9.3/vcf_
 chmod +x ${PREFIX}/bin/vcf_validator
 
 ## Install assertable package (not found through Conda channels), and pcgrr
-R -e "install.packages('${SRC_DIR}/src/R/assertable_0.2.7.tar.gz', lib='${PREFIX}/lib/R/library', repos = NULL)"
+R -e "install.packages('${SRC_DIR}/src/R/assertable_0.2.8.tar.gz', lib='${PREFIX}/lib/R/library', repos = NULL)"
 R -e "install.packages('${SRC_DIR}/src/R/pcgrr_0.9.2.tar.gz', lib='${PREFIX}/lib/R/library', repos = NULL)"
 
 ### Loftee. To make sure same LoF version is used in dockerized and non-dockerized installation.
@@ -32,3 +32,5 @@ R -e "install.packages('${SRC_DIR}/src/R/pcgrr_0.9.2.tar.gz', lib='${PREFIX}/lib
 #   with https://github.com/bioconda/bioconda-recipes/pull/18808 once merged)
 mkdir ${PREFIX}/share/loftee
 tar -xzf ${SRC_DIR}/src/loftee_1.0.3.tgz -C ${PREFIX}/share/loftee
+### Add directory with annoutils.py to the pythonpath
+export PYTHONPATH="${SP_DIR}:$PYTHONPATH"
