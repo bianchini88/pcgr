@@ -32,7 +32,7 @@ export CHANNELS="-c conda-forge -c bioconda -c defaults --override-channels"
 conda create --name pcgr compilers
 conda activate pcgr
 conda build $CHANNELS install_no_docker/conda_pkg/pcgr
-conda install --use-local $CHANNELS pcgr
+conda install --use-local $CHANNELS pcgr_test
 ```
 
 For both alternatives you also need to download the reference data bundle for your genome build:
