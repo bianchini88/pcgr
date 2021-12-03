@@ -82,4 +82,4 @@ pcgr.py
 --no_vcf_validate
 --no_docker
 ```
-If you encounter errors with VEP, you may need to unset/reset PERL5LIB (e.g. `export PERL5LIB=/home/foobar/code`), see the [following issue](https://github.com/bioconda/bioconda-recipes/issues/4390). The directory to be include in the include path are located in $HOME/miniconda/envs/pcgr/lib
+If you encounter errors with VEP, you may need to unset/reset PERL5LIB (e.g. `export PERL5LIB=/home/foobar/code`), see the [following issue](https://github.com/bioconda/bioconda-recipes/issues/4390). The directories to be added to the include path are located in $HOME/miniconda/envs/pcgr/lib
